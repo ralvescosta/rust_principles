@@ -1,5 +1,5 @@
 fn main() {
-    return_ownership();
+    return_ownership_with_reference();
 }
 
 fn ownership(){
@@ -37,4 +37,16 @@ fn calculate_length(s: String) -> (String, usize) {
     let length = s.len(); // len() returns the length of a String
 
     (s, length)
+}
+
+
+fn return_ownership_with_reference(){
+    let s = String::from("hello");
+
+    let len = calculate_length_with_ref(&s);
+
+    println!("The length of '{}' is {}.", s, len);
+}
+fn calculate_length_with_ref(s: &String) -> usize{
+    return s.len();
 }
