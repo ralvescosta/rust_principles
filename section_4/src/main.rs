@@ -22,7 +22,7 @@ fn takes_ownership(some_string: String) { // some_string comes into scope
 fn makes_copy(some_integer: i32) { // some_integer comes into scope
     println!("{}", some_integer);
 } // Here, some_integer goes out of scope. Nothing special happens.
-fn return_ownership(){
+fn return_ownership() {
     let s = String::from("hello");
 
     let (s, len) = calculate_length(s);
@@ -34,17 +34,17 @@ fn calculate_length(s: String) -> (String, usize) {
 
     (s, length)
 }
-fn return_ownership_with_reference(){
+fn return_ownership_with_reference() {
     let s = String::from("hello");
 
     let len = calculate_length_with_ref(&s);
 
     println!("The length of '{}' is {}.", s, len);
 }
-fn calculate_length_with_ref(s: &String) -> usize{
+fn calculate_length_with_ref(s: &String) -> usize {
     return s.len();
 }
-fn slice_of_string(){
+fn slice_of_string() {
     let my_string = String::from("hello world");
 
     let word = first_word(&my_string);
