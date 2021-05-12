@@ -1,6 +1,3 @@
-use std::iter::successors;
-
-
 fn main() {
     let rect1 = Rectangle {
         width: 30,
