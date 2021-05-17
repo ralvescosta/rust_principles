@@ -1,20 +1,13 @@
-mod generics;
+mod traits;
 
 fn main() {
     let number_list = vec![34, 50, 25, 100, 65];
 
-    let result = generics::largest(&number_list);
+    let result = traits::largest(&number_list);
     println!("The largest number is {}", result);
-}
 
-fn largest(list: &[i32]) -> i32 {
-    let mut largest = list[0];
+    let char_list = vec!['y', 'm', 'a', 'q'];
 
-    for &item in list {
-        if item > largest {
-            largest = item;
-        }
-    }
-
-    largest
+    let result = traits::largest(&char_list);
+    println!("The largest char is {}", result);
 }
