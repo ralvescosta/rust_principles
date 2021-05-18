@@ -1,13 +1,9 @@
-mod traits;
+mod lifetime;
 
 fn main() {
-    let number_list = vec![34, 50, 25, 100, 65];
+    let string1 = String::from("abcd");
+    let string2 = "xyz";
 
-    let result = traits::largest(&number_list);
-    println!("The largest number is {}", result);
-
-    let char_list = vec!['y', 'm', 'a', 'q'];
-
-    let result = traits::largest(&char_list);
-    println!("The largest char is {}", result);
+    let result = lifetime::longest(string1.as_str(), string2);
+    println!("The longest string is {}", result);
 }
