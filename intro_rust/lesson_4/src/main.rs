@@ -26,7 +26,7 @@ impl Object {
     }
 }
 
-// Trais from Struct -> this sintas we can do polimorfismo
+// Trait from Struct -> this sintas we can do polimorfismo
 impl Display for Object {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         write!(
